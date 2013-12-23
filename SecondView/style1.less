@@ -1,0 +1,199 @@
+body{
+	font-family: arial;
+}
+
+#feed{
+	min-width:800px;
+	width:90%;
+	border-left:2px solid #ececec;
+	border-right:2px solid #ececec;
+	border-bottom:2px solid #ececec;
+	height:600px;
+	overflow-y:scroll;
+	margin:auto;
+	background:#fff;
+	.cell{
+		width:100%;
+		height:162px;
+		clear:both;
+		border-top:2px solid #ececec;
+		.image{
+			float: left;
+			text-align: center;
+			width: 25%;
+			height: 150px;
+			margin: 5px;
+			border: 1px solid #ccc;
+			
+			line-height: 148px;
+			a{
+				img{
+					margin-top: 0; 													// IE 
+					vertical-align: middle;
+					max-height:90%;
+					max-width:90%;
+					width:auto;
+				}
+			}
+		}
+		.info{
+			width:70%;
+			float:right;
+			margin-top:40px;
+			.header{
+				h2.ellipsis{
+					text-transform:capitalize;
+					width: 90%;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					text-transform:capitalize;
+					margin: 0px;
+					a{
+						color:#4a4a4a;
+						text-decoration:none;
+					}
+					a:hover{
+						text-decoration:underline;
+					}
+				}				
+			}	
+			.description{
+				p{
+					display: inline-block;
+					margin-right: 20px;
+					color:#4a4a4a;
+					a{
+						color: #4a4a4a;
+					}
+				}
+			}
+			.socialMedia{
+				width:auto;
+				height:40px;
+				
+			}
+		}
+	}
+	.cell:nth-child(even) {
+		background: #b37400;
+		color:#fff;
+		.info{
+			.header{
+				h2.ellipsis{
+					a{
+						color:#fff;
+						
+					}
+				}				
+			}	
+			.description{
+				p{
+					
+					color:#fff;
+					a{
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* For XGA - IPAD View */
+
+@media(max-width:1024px){
+	#feed{
+		min-width:100px;
+		width:80%;
+		.cell{
+			.info{
+				margin-top: 15px;
+				.header{
+					margin-bottom:10px;
+					h2.ellipsis{
+						font-size:22px;
+					}
+				}
+				.description{
+					p{
+						font-size:15px;
+						float:left;
+						clear:both;
+						margin:5px;
+					}
+				}
+			}
+		}	
+	}
+}
+
+@media(max-width:550px){
+	#feed{
+		width:80%;
+		.cell{
+			height:293px;
+			.image{
+				width:100%;
+				border:none;
+			}
+			.info{
+				text-align: center;
+				margin-left:0px;
+				width:100%;
+				float:left;
+				clear:both;
+				.header{	
+					h2.ellipsis{
+						font-size:21px;
+						margin: 0px 0px 5px 0px;
+						width:100%;
+					}
+				}
+				.description{
+					margin-left:25%;
+					p{
+						font-size:14px;
+						margin:5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* WVGA low end windows phone */
+
+@media(max-width:480px){
+	#feed{
+		overflow:visible;
+		width:100%;
+		height:auto;
+		.cell{
+			.info{
+				.header{	
+					h2.ellipsis{
+						font-size:20px;
+					}
+				}
+				.description{
+					margin-left:0px;
+					p{
+						font-size:13px;
+						text-align: left;
+					}
+				}
+			}
+		}
+	}
+}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

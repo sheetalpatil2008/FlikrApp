@@ -1,0 +1,382 @@
+body{
+	font-family: 'Alegreya Sans SC', sans-serif;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dfdfdf));
+}
+
+.mainContainer{
+	max-width: 800px;
+	width: 70%;
+	border: 2px solid #ececec;
+	border-top: none;
+	height: 600px;
+	overflow-y: scroll;
+	margin: auto;
+	background: #fff;
+	box-shadow: 3px 3px 10px #989898;
+	.container{
+		min-height: 81px;
+		height: auto;
+		width: 98%;
+		h1{
+			color: #4a4a4a;
+			padding-left: 10px;
+			width: 70%;
+			float: left;
+		}
+		.button{
+			float: right;
+			display: inline-block;
+			margin: 28px 40px 0px 0px;
+			padding: 5px 20px;
+			background: #4a4a4a;
+			color: #fff;
+			background: -moz-linear-gradient(top, #989898, #4a4a4a);  //Firefox
+			background: -webkit-gradient(linear, left top, left bottom, from(#989898), to(#4a4a4a));//chrome
+			background: linear-gradient(#989898, #4a4a4a);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#989898', endColorstr='#4a4a4a');
+			
+		}
+		.table{
+			width:100%;
+			min-height:400px;
+			hight:auto;
+			.row{
+				width: 100%;
+				height: 165px;
+				clear: both;
+				//margin-bottom: 10px;
+				border-top: 2px solid #ececec;
+				.image{
+					float: left;
+					text-align: center;
+					width: 35%;
+					height: 153px;
+					margin: 5px;
+					border: 1px solid #ccc;
+					font-size: 1em;
+					line-height: 148px;
+					a{
+						img{
+							margin-top: 0;
+							vertical-align: middle;
+							max-height: 90%;
+							max-width: 90%;
+							width: auto;
+						}
+					}
+				}		
+				.info{
+					float: left;
+					margin-left: 20px;
+					width: 55%;
+					.header{
+						h2.ellipsis{
+							text-transform: capitalize;
+							width: 90%;
+							white-space: nowrap;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							a{
+								color: #989898;
+								text-decoration: none;
+							}
+							a:hover{
+								text-decoration: underline;
+							}
+						}
+					}
+					.description{
+						p{	
+							font-size: 18px;
+							font-style: italic;
+							a{
+								color: #4a4a4a;
+							}
+							.margin{
+								margin-left: 20px;
+							}
+						}
+					}
+				}
+			}
+			.row:hover, .row:active{
+				background: #4a4a4a;
+				background: -moz-linear-gradient(top, #989898, #000);  //Firefox
+				background: -webkit-gradient(linear, left top, left bottom, from(#989898), to(#000));//chrome
+				background: linear-gradient(#989898, #000);
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#989898', endColorstr='#000');
+				.info{
+					.header{
+						h2.ellipsis{
+							a{
+								color: #fff;
+							}
+						}
+					}
+				}
+				.description{
+					p{	
+						color: #fff;
+						a{
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+	.innerContainer{
+		width: 98%;
+		height: auto;
+		min-height: 450px;
+		//overflow-y: scroll;
+		clear: both;
+		margin-left: 10px;
+		border-top: 2px solid #ececec;	
+		h2{
+			a{
+				color: #989898;
+				text-decoration: none;
+			}
+			a:hover{
+				text-decoration: underline;
+			}
+		}
+		
+		.margin{
+			display: inline-block;
+			margin: 0px 30px 0 30px;
+		}
+		.image{
+			margin-top: 10px;
+			float: left;
+			width: 40%;
+			height: 250px;
+			a{
+				img{
+					max-height: 100%;
+					max-width: 90%;
+					width: auto;
+				}
+			}
+		}
+		.description{
+			margin-top: 10px;
+			margin-left: auto;
+			margin-right: auto;
+			width: 54%;
+			display: inline-block;
+			img{
+				display: none;
+			}
+			p{
+				a{
+					color: #4a4a4a;
+				}
+				a:hover{
+					color: #000;
+				}
+			}
+		}
+		.info{
+			p{	
+				display: inline-block;
+				margin-right: 20px;
+				font-size: 18px;
+				font-style: italic;
+				a{
+					color: #4a4a4a;
+				}
+				.margin{
+					margin-left: 20px;
+				}
+			}
+		}
+		ul.tags{
+			width: 54%;
+			padding: 0px;
+			margin-top: 20px;
+			display: inline-block;
+			li{
+				display: inline-block;
+				margin-left: 10px;
+				a{
+					color: #4a4a4a;
+				}
+				a:hover{
+					color: #000;
+				}
+			}
+		}
+		ul.tags:hover{
+			color: #000;
+		}
+	}
+}
+
+/* For XGA - IPAD View */
+@media(max-width: 1024px){	
+	h1{
+		font-size: 28px;
+	}
+	h2{
+		font-size: 22px;
+	}
+	p{
+		font-size: 17px;	
+	}
+}
+
+/* for WXGA - High end windows phone */
+@media(max-width: 768px){
+	h1{
+		font-size: 24px;
+		width: 50%;
+	}
+	h2{
+		font-size: 20px;
+		text-align: center;
+	}
+	p{
+		font-size:16px;	
+	}
+	
+	.mainContainer{
+		.container{
+			min-height: 60px;
+			.button {
+				margin-top: 18px;
+				margin-left: 5%;
+			}
+			h1{
+				font-size: 24px;
+				width: 50%;
+			}
+			.table{
+				.row{
+					.info{
+						.description{
+							p{
+								font-size:17px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.innerContainer{
+			.info {
+			
+				p{
+					text-align: center;
+					width: 100%;
+					margin: 0px;
+					padding: 0px;
+				}
+				p:nth-of-type(2){
+					display: none;
+				}
+			}
+			.image{
+				width: 97%;
+				clear: both;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+				height: 200px;
+				a{
+					img{
+						width: auto;
+						max-height: 200px;
+						max-width: 350px;
+						margin: auto;
+					}
+				}
+			}
+			.description{
+				width: 97%;
+				text-align: center;
+			}
+			ul.tags{
+				width: 97%;
+				text-align: center;
+			}
+		}
+	}
+}
+
+/* DVGA - Iphone */
+
+@media(max-width: 640px){
+
+	.mainContainer{
+		.container{
+			h1{
+				font-size: 23px;
+				width: 100%;
+				text-align: center;
+			}
+			.button{
+				margin: 0;
+				float: none;
+				text-align: left;
+				margin-left: 43%;
+				clear: both;
+				margin-bottom: 10px;
+			}
+			.table{
+				.row{
+					height: 255px;
+					.image{
+						width: 100%;
+						border: none;
+					}
+					.info{
+						text-align: center;
+						margin-left: 0px;
+						width: 100%;
+						float: left;
+						clear: both;
+						.header{
+							h2.ellipsis{
+								font-size: 20px;
+								margin: 0px 0px 5px 0px;
+								width: 100%;
+							}
+						}
+						.description{
+							p{
+								font-size: 16px;
+								margin: 0px;
+							}
+						}
+					}
+				}
+			}
+			.innerContainer {
+				p{
+					width: 100%;
+					text-align: center;
+					margin: 0px;
+				}
+				.margin{
+					display: none;
+				}
+			}
+		}	
+	}
+}
+
+/* WVGA low end windows phone */
+
+@media(max-width:480px){
+
+	.mainContainer{
+		overflow: visible;
+		width: 100%;
+		height: auto;
+		h1{
+			font-size: 21px;
+		}
+	}
+}
